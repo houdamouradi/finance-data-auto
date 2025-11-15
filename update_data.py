@@ -25,7 +25,15 @@ def get_prices_yfinance(symbol):
         hist = yf.download(symbol, start=START_DATE, interval="1d")
         
         if not hist.empty:
+            if isinstance(hist.columns, pd.MultiIndex):
+                hist.columns = hist.columns.get_level_values(0)
+
+            hist['Ticker'] = symbol
+            
             hist.reset_index(inplace=True)
+
+            if 'Date' in hist.columns:
+                hist['Date'] = hist['Date'].dt.strftime('%Y-%m-%d')
             
             filename = f"{OUTPUT_FOLDER}/{symbol}_prices.csv"
             hist.to_csv(filename, index=False)
