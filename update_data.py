@@ -13,17 +13,10 @@ TICKERS = ["AAPL", "MSFT", "GOOGL", "AMZN", "NVDA", "ORCL", "INTC", "ADBE", "CSC
 if not API_KEY:
     raise ValueError("La clé API Alpha Vantage est manquante dans les secrets.")
 
-#CONFIGURATION ANTI-BLOCAGE POUR YFINANCE
-# On crée une session qui se fait passer pour un navigateur Chrome
-session = requests.Session()
-session.headers.update({
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-})
-
 def get_prices_yfinance(symbol):
     try:
         ticker = yf.Ticker(symbol, session=session)
-        hist = yf.download(symbol, start=START_DATE, interval="1d", session=session)
+        hist = yf.download(symbol, start=START_DATE, interval="1d")
         
         if not hist.empty:
             hist.reset_index(inplace=True)
