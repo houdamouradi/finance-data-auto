@@ -37,6 +37,3 @@ jobs:
           # Le commit n'échouera pas s'il n'y a pas de changement (ex: bourse fermée)
           git commit -m "Mise à jour automatique des données" || exit 0
           git push
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
