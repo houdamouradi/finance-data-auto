@@ -8,7 +8,7 @@ from alpha_vantage.fundamentaldata import FundamentalData
 #CONFIGURATION
 START_DATE = "2005-01-01"
 API_KEY = os.environ.get("ALPHA_VANTAGE_KEY")
-TICKERS = ["AAPL", "MSFT", "GOOGL", "AMZN", "NVDA", "ORCL", "INTC"]
+TICKERS = ["AAPL", "MSFT", "GOOGL", "AMZN", "NVDA", "ORCL", "INTC", "ADBE", "CSCO", "CRM"]
 
 if not API_KEY:
     raise ValueError("La clé API Alpha Vantage est manquante dans les secrets.")
