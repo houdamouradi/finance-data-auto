@@ -50,18 +50,21 @@ def get_fundamentals_alpha(symbol):
     try:
         # Income Statement 
         income_data, _ = fd.get_income_statement_quarterly(symbol)
+        income_data['Ticker'] = symbol
         income_data.to_csv(f"{OUTPUT_FOLDER}/{symbol}_financials_income.csv", index=False)
         print(f"Income Statement OK")
         time.sleep(2) 
 
         # Balance Sheet 
         balance_data, _ = fd.get_balance_sheet_quarterly(symbol)
+        balance_data['Ticker'] = symbol
         balance_data.to_csv(f"{OUTPUT_FOLDER}/{symbol}_financials_balance.csv", index=False)
         print(f"Balance Sheet OK")
         time.sleep(2)
 
         # Cash Flow
         cash_data, _ = fd.get_cash_flow_quarterly(symbol)
+        cash_data['Ticker'] = symbol
         cash_data.to_csv(f"{OUTPUT_FOLDER}/{symbol}_financials_cashflow.csv", index=False)
         print(f"Cash Flow OK")
         
