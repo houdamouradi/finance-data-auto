@@ -11,7 +11,7 @@ if not os.path.exists(OUTPUT_FOLDER):
     os.makedirs(OUTPUT_FOLDER)
 
 
-START_DATE = "2000-01-01"
+START_DATE = "2000-09-30"
 API_KEY = os.environ.get("ALPHA_VANTAGE_KEY")
 TICKERS = ["AAPL", "MSFT", "GOOGL", "AMZN", "NVDA", "ORCL", "INTC", "ADBE", "CSCO", "CRM"]
 
