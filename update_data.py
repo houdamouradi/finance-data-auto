@@ -11,7 +11,7 @@ if not os.path.exists(OUTPUT_FOLDER):
     os.makedirs(OUTPUT_FOLDER)
 
 
-START_DATE = "2005-01-01"
+START_DATE = "2000-01-01"
 API_KEY = os.environ.get("ALPHA_VANTAGE_KEY")
 TICKERS = ["AAPL", "MSFT", "GOOGL", "AMZN", "NVDA", "ORCL", "INTC", "ADBE", "CSCO", "CRM"]
 
@@ -76,7 +76,7 @@ def get_fundamentals_alpha(symbol):
 
 for t in TICKERS:
     get_prices_yfinance(t)
-    time.sleep(5)
+    time.sleep(2)
     get_fundamentals_alpha(t)
     
     print("-" * 30)
