@@ -69,25 +69,6 @@ Vue comparative de toutes les entreprises : tableau quotidien (cours de clôture
 
 ---
 
-## Structure du dépôt
-
-```
-finance-data-auto/
-├── .github/
-│   └── workflows/              # Pipeline GitHub Actions (automatisation)
-├── data/                       # Fichiers CSV générés (prix + fondamentaux)
-├── screenshot/                # Captures du dashboard (à ajouter au repo)
-│   ├── 01_profile.png
-│   ├── 02_overview.png
-│   ├── 03_overview2.png
-│   └── 04_comparison.png
-├── update_data.py              # Script principal de collecte
-├── Rapport intéractive.pbix    # Dashboard Power BI
-└── README.md
-```
-
----
-
 ## Installation et utilisation
 
 ### Prérequis
