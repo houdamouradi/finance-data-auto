@@ -43,33 +43,29 @@ Ce projet combine **ingestion automatisée de données financières** et **visua
 
 Le rapport est structuré en **4 pages** accessibles via un menu latéral :
 
-<p align="center">
-  <img src="screenshots/05_navigation.png" alt="Menu de navigation" width="300"/>
-</p>
-
 ### Profile — Fiche d'identité de l'entreprise
 
 Présentation synthétique : nom, ticker, secteur, industrie, adresse, ville, nombre de salariés et description complète de l'activité.
 
-![Page Profile](screenshots/01_profile.png)
+![Page Profile](screenshot/01_profile.png)
 
 ### Overview — Indicateurs de rentabilité et de croissance
 
 Vue d'ensemble des KPIs clés : **Croissance CA %**, **ROIC %**, **PE Ratio**, **EPS**, ainsi que les graphiques d'évolution du cash flow, de la rentabilité des capitaux propres/investis et des revenus avec comparaison vs. année précédente (avec objectifs).
 
-![Page Overview](screenshots/02_overview.png)
+![Page Overview](screenshot/02_overview.png)
 
 ### Overview 2 — Analyse boursière approfondie
 
 Focus sur les prix boursiers (Open / Low / High / Close), la relation **Prix vs Volume**, l'évolution multi-courbes des cours, le scatter plot **Croissance vs. Rentabilité** et le tandem **Revenus / Marge Nette**.
 
-![Page Overview 2](screenshots/03_overview2.png)
+![Page Overview 2](screenshot/03_overview2.png)
 
 ### Comparaison — Tableau de bord multi-entreprises
 
 Vue comparative de toutes les entreprises : tableau quotidien (cours de clôture + volume avec logos), bubble chart **Croissance CA % × Marge Nette × Market Cap**, et matrice historique des marges par symbole et par année.
 
-![Page Comparaison](screenshots/04_comparison.png)
+![Page Comparaison](screenshot/04_comparison.png)
 
 ---
 
@@ -80,12 +76,11 @@ finance-data-auto/
 ├── .github/
 │   └── workflows/              # Pipeline GitHub Actions (automatisation)
 ├── data/                       # Fichiers CSV générés (prix + fondamentaux)
-├── screenshots/                # Captures du dashboard (à ajouter au repo)
+├── screenshot/                # Captures du dashboard (à ajouter au repo)
 │   ├── 01_profile.png
 │   ├── 02_overview.png
 │   ├── 03_overview2.png
-│   ├── 04_comparison.png
-│   └── 05_navigation.png
+│   └── 04_comparison.png
 ├── update_data.py              # Script principal de collecte
 ├── Rapport intéractive.pbix    # Dashboard Power BI
 └── README.md
